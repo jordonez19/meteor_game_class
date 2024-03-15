@@ -47,8 +47,7 @@ This manual provides basic instructions to start playing and the associated keys
 ## Class Diagram:
 ### Methods:
 ```plaintext
-
-  
+ 
     +--------------+
     |     Bullet   |
     +--------------+
@@ -77,7 +76,31 @@ This manual provides basic instructions to start playing and the associated keys
 
 ## Entity-Relationship Diagram:
 
-![](./markdown/entity_relation.png)
+```plaintext
++------------------+  1   +------------------+  N   +------------------+  N   +------------------+
+|     Player       |----->|       Ship       |----->|       Bullet     |----->|    Asteroid      |
++------------------+      +------------------+      +------------------+      +------------------+
+| ID               |      | ID               |      | ID               |      | ID               |
+| Name             |      | Position         |      | Position         |      | Position         |
++------------------+      | Velocity         |      | Velocity         |      | Velocity         |
+                          | State            |      | Trajectory       |      | Size             |
+                          | Player_ID (FK)   |      +------------------+      | Trajectory       |
+                           +------------------+            |                  +------------------+
+                                  |  N                     |                        
+                                  |                        |                        
+                                  |                        |                        
+                           +------------------+            |                        
+                           |      Level       |------------+                        
+                           +------------------+                                     
+                           | ID               |                                     
+                           | Number           |                                    
+                           | Asteroid_qty     |                                     
+                           | Asteroid_speed   |                                     
+                           +------------------+                                     
+                                                                                     
+                                 
+                                                                                     
+```
 
 Asteroid**
 
@@ -214,7 +237,28 @@ Este manual proporciona instrucciones básicas para comenzar a jugar y las tecla
 
 # Diagrama de Entidad-Relación:
 
-![](./markdown/entity_relation.png)
+```plaintext
++------------------+  1   +------------------+  N   +------------------+  N   +------------------+
+|     Player       |----->|       Ship       |----->|       Bullet     |----->|    Asteroid      |
++------------------+      +------------------+      +------------------+      +------------------+
+| ID               |      | ID               |      | ID               |      | ID               |
+| Name             |      | Position         |      | Position         |      | Position         |
++------------------+      | Velocity         |      | Velocity         |      | Velocity         |
+                          | State            |      | Trajectory       |      | Size             |
+                          | Player_ID (FK)   |      +------------------+      | Trajectory       |
+                           +------------------+            |                  +------------------+
+                                  |  N                     |                        
+                                  |                        |                        
+                                  |                        |                        
+                           +------------------+            |                        
+                           |      Level       |------------+                        
+                           +------------------+                                     
+                           | ID               |                                     
+                           | Number           |                                    
+                           | Asteroid_qty     |                                     
+                           | Asteroid_speed   |                                     
+                           +------------------+                                     
+```
 
 
 
