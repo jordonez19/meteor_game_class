@@ -44,62 +44,6 @@ Control of the Ship: Use the arrow keys to move the ship in the desired directio
 
 This manual provides basic instructions to start playing and the associated keys to control the ships and fire in the game. Enjoy!
 
-```plaintext
-Start
-↓
-Show Start Interface
-↓
-Select Number of Players
-↓
-Play
-↓
-Control Ship(s)
-↓
-Fire
-↓
-Collision with Asteroids
-↓
-Increase Score
-↓
-Check if all asteroids have been destroyed
-└─ Yes
-   ↓
-   Increase Level
-   └─ Are all levels completed?
-      └─ Yes
-         ↓
-         Show End of Game Message
-         ↓
-         Show End Game Interface
-         ↓
-         Restart or Quit
-         ↓
-         End
-      └─ No
-         ↓
-         Play
-         ↓
-         Control Ship(s)
-         ↓
-         Fire
-         ↓
-         Collision with Asteroids
-         ↓
-         Increase Score
-         ↓
-         Check if all asteroids have been destroyed
-   ↓
-   Repeat until all levels are completed
-└─ No
-   ↓
-   Show End Game Interface
-   ↓
-   Restart or Quit
-   ↓
-   End
-
-```
-
 ## Class Diagram:
 ### Methods:
 ```plaintext
@@ -234,64 +178,6 @@ Control de la Nave: Utiliza las teclas de dirección para mover la nave en la di
 **Disparar**: Tecla "Espacio"
 
 Este manual proporciona instrucciones básicas para comenzar a jugar y las teclas asociadas para controlar las naves y disparar en el juego. ¡Espero que lo disfrutes!
-
-## Diagrama de Flujo:
-
-```plaintext
-Inicio
-↓
-Mostrar Interfaz de Inicio
-↓
-Seleccionar Número de Jugadores
-↓
-Jugar
-↓
-Controlar Nave(s)
-↓
-Disparar
-↓
-Colisión con Asteroides
-↓
-Aumentar Puntuación
-↓
-Comprobar si se han destruido todos los asteroides
-└─ Sí
-   ↓
-   ↓
-   Aumentar Nivel
-   └─ ¿Todos los niveles completados?
-      └─ Sí
-         ↓
-         Mostrar Mensaje de Fin del Juego
-         ↓
-         Mostrar Interfaz de Fin del Juego
-         ↓
-         Reiniciar o Salir
-         ↓
-         Fin
-      └─ No
-         ↓
-         Jugar
-         ↓
-         Controlar Nave(s)
-         ↓
-         Disparar
-         ↓
-         Colisión con Asteroides
-         ↓
-         Aumentar Puntuación
-         ↓
-         Comprobar si se han destruido todos los asteroides
-   ↓
-   Repetir hasta que todos los niveles sean completados
-└─ No
-   ↓
-   Mostrar Interfaz de Fin del Juego
-   ↓
-   Reiniciar o Salir
-   ↓
-   Fin
-```
 
 # Diagrama de Clases:
 ### Metodos:
