@@ -47,27 +47,53 @@ This manual provides basic instructions to start playing and the associated keys
 ## Class Diagram:
 ### Methods:
 ```plaintext
- 
-    +--------------+
-    |     Bullet   |
-    +--------------+
-    | - player_idx |
-    | - position   |
-    +--------------+
-            |
-    +--------------+
-    |   Asteroid   |
-    +--------------+
-    | - speed      |
-    | - position   |
-    +--------------+
-            |
-    +--------------+
-    |     Ship     |
-    +--------------+
-    | - player_idx |
-    | - position   |
-    +--------------+
++---------------------------+
+|      GameObject           |
++---------------------------+
+| - image: pygame.Surface   |
+| - position: tuple         |
+| - rect: pygame.Rect       |
+| + move()                  |
+| + draw()                  |
++---------------------------+
+             |
+             v
++---------------------------+
+|      Ship                 |
++---------------------------+
+| - speed: dict             |
+| - player_idx: int         |
+| - cooling_time: int       |
+| - explode_stop: int       |
+| + explode()               |
+| + move()                  |
+| + draw()                  |
+| + shot()                  |
++---------------------------+
+                ^
+                |
++---------------------------+
+|      Bullet               |
++---------------------------+
+| - speed: int              |
+| - player_idx: int         |
+| + move()                  |
+| + draw()                  |
++---------------------------+
+                ^
+                |
++---------------------------+
+|     Asteroid              |
++---------------------------+
+| - speed: int              |
+| - angle: int              |
+| - angular_velocity: int   |
+| - rotate_ticks: int       |
+| + move()                  |
+| + rotate()                |
+| + draw()                  |
++---------------------------+
+
 ```
 ## flow diagram:
 
@@ -207,27 +233,52 @@ Este manual proporciona instrucciones básicas para comenzar a jugar y las tecla
 
 ```plaintext
 
- 
-    +--------------+
-    |     Bullet   |
-    +--------------+
-    | - player_idx |
-    | - position   |
-    +--------------+
-            |
-    +--------------+
-    |   Asteroid   |
-    +--------------+
-    | - speed      |
-    | - position   |
-    +--------------+
-            |
-    +--------------+
-    |     Ship     |
-    +--------------+
-    | - player_idx |
-    | - position   |
-    +--------------+
++---------------------------+
+|      GameObject           |
++---------------------------+
+| - image: pygame.Surface   |
+| - position: tuple         |
+| - rect: pygame.Rect       |
+| + move()                  |
+| + draw()                  |
++---------------------------+
+             |
+             v
++---------------------------+
+|      Ship                 |
++---------------------------+
+| - speed: dict             |
+| - player_idx: int         |
+| - cooling_time: int       |
+| - explode_stop: int       |
+| + explode()               |
+| + move()                  |
+| + draw()                  |
+| + shot()                  |
++---------------------------+
+                ^
+                |
++---------------------------+
+|      Bullet               |
++---------------------------+
+| - speed: int              |
+| - player_idx: int         |
+| + move()                  |
+| + draw()                  |
++---------------------------+
+                ^
+                |
++---------------------------+
+|     Asteroid              |
++---------------------------+
+| - speed: int              |
+| - angle: int              |
+| - angular_velocity: int   |
+| - rotate_ticks: int       |
+| + move()                  |
+| + rotate()                |
+| + draw()                  |
++---------------------------+
 ```
 
 
